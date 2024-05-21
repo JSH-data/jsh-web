@@ -1,0 +1,9 @@
+{
+  "name": "mfa-blog",
+  "packageManager": "yarn@4.2.2",
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  }
+}
