@@ -1,0 +1,102 @@
+{
+  "id": "remote1",
+  "name": "remote1",
+  "metaData": {
+    "name": "remote1",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "local",
+      "buildName": "blog"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "remote1",
+    "pluginVersion": "0.1.19",
+    "publicPath": "http://localhost:3001/client/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "shareScope": "default",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "remote1:react-dom",
+      "assets": {
+        "js": {
+          "async": [
+            "485.js"
+          ],
+          "sync": [
+            "920.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "shareScope": "default",
+      "name": "react",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "remote1:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "485.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./Blog"
+      ]
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./Blog",
+      "id": "remote1:Blog",
+      "name": "Blog",
+      "requires": [
+        "react"
+      ],
+      "file": "src/blog.tsx",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_Blog.js"
+          ],
+          "async": [
+            "485.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ]
+}

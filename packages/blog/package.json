@@ -1,0 +1,37 @@
+{
+  "name": "blog",
+  "packageManager": "yarn@4.2.2",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "start": "yarn build && yarn serve",
+    "serve": "npx serve dist/ -p 3001",
+    "build": "yarn build:client && yarn build:server",
+    "build:client": "rimraf dist/client && webpack --mode production --config config/webpack.client.js",
+    "build:server": "rimraf dist/server && webpack --mode production --config config/webpack.server.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "@module-federation/enhanced": "^0.1.19",
+    "@module-federation/node": "^2.2.10",
+    "@types/babel__core": "^7",
+    "@types/babel__preset-env": "^7",
+    "@types/react": "^18",
+    "@types/react-dom": "^18.3.0",
+    "babel-loader": "^9.1.3",
+    "html-webpack-plugin": "^5.6.0",
+    "rimraf": "^5.0.7",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  }
+}
