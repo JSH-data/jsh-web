@@ -4,7 +4,7 @@ const { UniversalFederationPlugin } = require('@module-federation/node');
 
 module.exports = {
   client: new ModuleFederationPlugin({
-    name: 'shell',
+    name: 'host',
     filename: 'container.js',
     remotes: {
       remote1: 'remote1@http://localhost:3001/client/remoteEntry.js',
@@ -14,7 +14,7 @@ module.exports = {
   server: [
     new UniversalFederationPlugin({
       remoteType: 'script',
-      name: 'shell',
+      name: 'host',
       isServer: true,
       library: { type: 'commonjs-module' },
       filename: 'remoteEntry.js',

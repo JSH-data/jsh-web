@@ -10,7 +10,6 @@ const webpackConfig = {
       {
         test: /\.tsx?$/,
         loader: 'ts-loader',
-        // use: ['ts-loader', "babel-loader"],
       }
     ]
   },

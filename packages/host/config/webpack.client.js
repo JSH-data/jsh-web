@@ -9,9 +9,9 @@ const moduleFederationPlugin = require('./module-federation');
 const webpackConfig = {
   name: 'client',
   target: 'web',
-  entry: ['@babel/polyfill', path.resolve(__dirname, '../src/index')],
+  entry: ['@babel/polyfill', path.resolve(__dirname, '../src/client/index')],
   mode: 'production',
-  // devtool: 'source-map', // 소스맵이 필요할까?
+  devtool: 'source-map', // 소스맵이 필요할까?
   output: {
     path: path.resolve(__dirname, '../dist/client'),
     filename: '[name].js',

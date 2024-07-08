@@ -9,7 +9,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
  * @type {import('webpack').Configuration}
  **/
 const webpackConfig = {
-  entry: "./src/index.tsx",
+  entry: "./src/client/index.tsx",
   mode: 'development',
   output: {
     path: path.resolve(__dirname, '../dist'),

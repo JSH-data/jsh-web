@@ -7,15 +7,15 @@ const moduleFederationPlugin = require('./module-federation');
  * @type {import('webpack').Configuration}
  **/
 const webpackConfig = {
-  name: 'server',
+  name: "server",
+  mode: "production",
   target: false,
   entry: ['@babel/polyfill', path.resolve(__dirname, '../src/server/index')],
   output: {
-    path: path.resolve(__dirname, '../dist/server'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, "../dist/server"),
+    filename: "index.js",
     libraryTarget: 'commonjs-module',
   },
-  mode: 'production',
   plugins: [...moduleFederationPlugin.server],
   stats: {
     colors: true,
