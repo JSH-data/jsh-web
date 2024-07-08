@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "webpack serve --mode development",
     "start": "yarn build && yarn serve",
-    "serve": "npx serve dist/ -p 3001",
+    "serve": "npx serve --cors dist/ -p 3001",
     "build": "yarn build:client && yarn build:server",
     "build:client": "rimraf dist/client && webpack --mode production --config config/webpack.client.js",
     "build:server": "rimraf dist/server && webpack --mode production --config config/webpack.server.js"

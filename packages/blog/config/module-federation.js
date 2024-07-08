@@ -30,7 +30,7 @@ module.exports = {
       library: { type: 'commonjs-module' },
       isServer: true,
       exposes: {
-        './blog': './src/blog.tsx',
+        './Blog': './src/blog.tsx',
       },
       shared: {
         ...deps,
